@@ -6,17 +6,16 @@
 
 int main()
 {
-	// ∫§≈Õ ∫–«“
+	glm::vec3 p1(3.0f, 0, 0);
+	glm::vec3 p2(1.5f, 0.86f, 0);
+	glm::vec3 p3(3.0f, 0, -1.0f);
 
-	glm::vec3 v(1, 2, -1);
-	glm::vec3 c(0, 1, 0);
+	glm::vec3 v1 = p2 - p1;
+	glm::vec3 v2 = p3 - p1;
 
-	float l = glm::dot(v, c);
+	glm::vec3 normal = glm::normalize(glm::cross(v1, v2));
 
-	glm::vec3 b = c * l;
-	glm::vec3 a = v - a;
-
-	std::cout << glm::to_string(a) << glm::to_string(b) << std::endl;
+	std::cout << glm::to_string(normal) << std::endl;
 
 	return 0;
 
